@@ -38,7 +38,7 @@ class NormalForm implements Form
     {
         if ($data === null) {
             //フォームが閉じられた場合
-            $player->sendMessage(TextFormat::RED . "フォームが閉じられました。");//Configに書いてあるメッセージを送信
+            $player->sendMessage(TextFormat::RED . "フォームが閉じられました。");
             return;//ここで処理を終了
         }
         switch ($data) {

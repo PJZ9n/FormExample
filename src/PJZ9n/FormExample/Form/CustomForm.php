@@ -29,7 +29,7 @@ use pocketmine\utils\TextFormat;
 
 /**
  * Class CustomForm
- * 自由に様々な要素を設置できるフォーム
+ * 自由に様々な要素を配置できるフォーム
  */
 class CustomForm implements Form
 {
@@ -37,7 +37,7 @@ class CustomForm implements Form
     {
         if ($data === null) {
             //フォームが閉じられた場合
-            $player->sendMessage(TextFormat::RED . "フォームが閉じられました。");//Configに書いてあるメッセージを送信
+            $player->sendMessage(TextFormat::RED . "フォームが閉じられました。");
             return;//ここで処理を終了
         }
         $knowTwitter = $data[1];
