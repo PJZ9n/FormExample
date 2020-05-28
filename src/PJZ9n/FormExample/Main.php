@@ -50,11 +50,11 @@ class Main extends PluginBase
                 return true;
             case "form":
                 $form = new NormalForm();//NormalFormのオブジェクトを生成
-                $sender->sendForm($form);
+                $sender->sendForm($form);//送信する
                 return true;
             case "custom":
                 $form = new CustomForm();//CustomFormのオブジェクトを生成
-                $sender->sendForm($form);
+                $sender->sendForm($form);//送信する
                 return true;
         }
         return false;
