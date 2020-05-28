@@ -1,4 +1,4 @@
-name: Template
+name: FormExample
 version: 1.0.0
-main: PJZ9n\Template\Main
-api: 3.0.0
+main: PJZ9n\FormExample\Main
+api: 3.2.0
