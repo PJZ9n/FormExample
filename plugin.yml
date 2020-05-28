@@ -2,3 +2,13 @@ name: FormExample
 version: 1.0.0
 main: PJZ9n\FormExample\Main
 api: 3.2.0
+commands:
+  form:
+    description: フォームを出す
+    usage: /form <modal:form:custom>
+    aliases:
+      - f
+    permission: formexample.command.form
+permissions:
+  formexample.command.form:
+    default: true

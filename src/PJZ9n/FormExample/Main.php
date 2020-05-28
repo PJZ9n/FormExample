@@ -23,9 +23,34 @@ declare(strict_types=1);
 
 namespace PJZ9n\FormExample;
 
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase
 {
-    //
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool
+    {
+        if (!$sender instanceof Player) {
+            $sender->sendMessage(TextFormat::RED . "このコマンドはプレイヤーから実行してください。");
+            return true;
+        }
+        if (count($args) < 1) {
+            return false;
+        }
+        switch ($args[0]) {
+            case "modal":
+                //
+                return true;
+            case "form":
+                //
+                return true;
+            case "custom":
+                //
+                return true;
+        }
+        return false;
+    }
 }
