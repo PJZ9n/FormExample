@@ -24,6 +24,7 @@ declare(strict_types=1);
 namespace PJZ9n\FormExample;
 
 use PJZ9n\FormExample\Form\ModalForm;
+use PJZ9n\FormExample\Form\NormalForm;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -47,7 +48,8 @@ class Main extends PluginBase
                 $sender->sendForm($form);//送信する
                 return true;
             case "form":
-                //
+                $form = new NormalForm();//NormalFormのオブジェクトを生成
+                $sender->sendForm($form);
                 return true;
             case "custom":
                 //
