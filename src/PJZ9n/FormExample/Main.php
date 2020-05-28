@@ -23,6 +23,7 @@ declare(strict_types=1);
 
 namespace PJZ9n\FormExample;
 
+use PJZ9n\FormExample\Form\CustomForm;
 use PJZ9n\FormExample\Form\ModalForm;
 use PJZ9n\FormExample\Form\NormalForm;
 use pocketmine\command\Command;
@@ -52,7 +53,8 @@ class Main extends PluginBase
                 $sender->sendForm($form);
                 return true;
             case "custom":
-                //
+                $form = new CustomForm();//CustomFormのオブジェクトを生成
+                $sender->sendForm($form);
                 return true;
         }
         return false;
